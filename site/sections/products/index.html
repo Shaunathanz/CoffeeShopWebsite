@@ -1,11 +1,12 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css?Thursday 24th of April 2008 04:45:21 PM" media="screen"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../../js/site.js"></script>
         <title id = "tab_name">sections/products</title>
     </head>
 
-    <body style = "background-color: black;">
+    <body class="body" style = "background-color: black;">
         <div class = "logo">
             <img class = "logoImg" src = "../../images/logo.png" onclick = "goToPage('home')">
         </div>
@@ -33,81 +34,158 @@
         </div>
 
         <!--PAGE-SPECIFIC CONTENT GOES HERE-->
-        <div class = "additional-links">
-            <h3>Additional Links</h3>
-            <ul>
-                <li onclick = "goToPage('contact');" >Feedback</li>
-            </ul>
-        </div>
-        <div class = "content-area">
-            <div>
-                <table class = "table">
-                    <thead>
-                        <th><!--Image--></th>
-                        <th>Model</th>
-                        <th>Type</th>
-                        <th>Price</th>
-                        <th><!--Add to Cart Button--></th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><img src = "../../images/test/cowboy.png" style = "scale:auto"></td>
-                            <td>Breville Barista Express 870XL</td>
-                            <td>Espresso Machine</td>
-                            <td>$699.95</td>
-                            <td><button onlclick = "";>Add to Cart</button></td>
-                        </tr>
-                        <tr>
-                            <td><img src = "../../images/test/cowboy.png" style = "scale:auto"></td>
-                            <td>Breville Barista Express 870XL</td>
-                            <td>Espresso Machine</td>
-                            <td>$699.95</td>
-                            <td><button onlclick = "";>Add to Cart</button></td>
-
-                        </tr>
-                        <tr>
-                            <td><img src = "../../images/test/cowboy.png" style = "scale:auto"></td>
-                            <td>Breville Barista Express 870XL</td>
-                            <td>Espresso Machine</td>
-                            <td>$699.95</td>
-                            <td><button onlclick = "";>Add to Cart</button></td>
-
-                        </tr>
-                        <tr>
-                            <td><img src = "../../images/test/cowboy.png" style = "scale:auto"></td>
-                            <td>Breville Barista Express 870XL</td>
-                            <td>Espresso Machine</td>
-                            <td>$699.95</td>
-                            <td><button onlclick = "";>Add to Cart</button></td>
-
-                        </tr>
-                        <tr>
-                            <td><img src = "../../images/test/cowboy.png" style = "scale:auto"></td>
-                            <td>Breville Barista Express 870XL</td>
-                            <td>Espresso Machine</td>
-                            <td>$699.95</td>
-                            <td><button onlclick = "";>Add to Cart</button></td>
-
-                        </tr>
-                        <tr>
-                            <td><img src = "../../images/test/cowboy.png" style = "scale:auto"></td>
-                            <td>Breville Barista Express 870XL</td>
-                            <td>Espresso Machine</td>
-                            <td>$699.95</td>
-                            <td><button onlclick = "";>Add to Cart</button></td>
-
-                        </tr>
-                        <tr>
-                            <td><img src = "../../images/test/cowboy.png" style = "scale:auto"></td>
-                            <td>Breville Barista Express 870XL</td>
-                            <td>Espresso Machine</td>
-                            <td>$699.95</td>
-                            <td><button onlclick = "";>Add to Cart</button></td>
-
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="content">
+            <div class = "content-area">
+                <div>
+                    <table class = "table">
+                        <thead>
+                            <th>Image</th>
+                            <th>Model</th>
+                            <th>Type</th>
+                            <th>Price</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="productImg" src = "../../images/pd_breville.png" style = "scale:auto"></td>
+                                <td>Breville Barista Express 870XL</td>
+                                <td>Espresso Machine</td>
+                                <td>$699.95</td>
+                                <td><button type="button" onclick="addToCart(1)">Add to Cart</button></td>
+                            </tr>
+                            <tr>
+                                <td><img class="productImg" src = "../../images/pd_ninja.png" style = "scale:auto"></td>
+                                <td>Ninja Coffee Bar</td>
+                                <td>Coffee Machine</td>
+                                <td>$99.99</td>
+                                <td><button type="button" onclick="addToCart(2)">Add to Cart</button></td>
+    
+                            </tr>
+                            <tr>
+                                <td><img class="productImg" src = "../../images/pd_hariov60ceramic.png" style = "scale:auto"></td>
+                                <td>Hario V60 Ceramic</td>
+                                <td>Drip Cone</td>
+                                <td>$19.99</td>
+                                <td><button type="button" onclick="addToCart(3)">Add to Cart</button></td>
+    
+                            </tr>
+                            <tr>
+                                <td><img class="productImg" src = "../../images/pd_bottomlessporta.png" style = "scale:auto"></td>
+                                <td>Bottomless Portafilter Basket 54mm</td>
+                                <td>Accessory</td>
+                                <td>$69.99</td>
+                                <td><button type="button" onclick="addToCart(4)">Add to Cart</button></td>
+    
+                            </tr>
+                            <tr>
+                                <td><img class="productImg" src = "../../images/pd_waterfilters.png" style = "scale:auto"></td>
+                                <td>Water Tank Filters</td>
+                                <td>Brewing Supplies</td>
+                                <td>$9.99</td>
+                                <td><button type="button" onclick="addToCart(5)">Add to Cart</button></td>
+    
+                            </tr>
+                            <tr>
+                                <td><img class="productImg" src = "../../images/pd_hariov60filters.png" style = "scale:auto"></td>
+                                <td>Hario V60 Unbleached Filters</td>
+                                <td>Brewing Supplies</td>
+                                <td>$9.99</td>
+                                <td><button type="button" onclick="addToCart(6)">Add to Cart</button></td>
+    
+                            </tr>
+                            <tr>
+                                <td><img class="productImg" src = "../../images/pd_coffee1lb.png" style = "scale:auto"></td>
+                                <td>Coffee Beans (1lb.)</td>
+                                <td>Coffee</td>
+                                <td>$16.99</td>
+                                <td><button type="button" onclick="addToCart(7)">Add to Cart</button></td>
+                            </tr>
+                            <tr>
+                                <td><img class="productImg" src = "../../images/pd_coffee5lbs.png" style = "scale:auto"></td>
+                                <td>Coffee Beans (5lbs.)</td>
+                                <td>Coffee</td>
+                                <td>$89.99</td>
+                                <td><button type="button" onclick="addToCart(8)">Add to Cart</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+        </div>
+        <!--Cart Button-->
+        <div class = "cart" id = "cart">
+            <!--modal content-->
+            <div class = "cart-content">
+                <!--cart button-->
+                <div><img src="../../images/cart.png" height = "400px" width = "400px" onclick = "checkoutPopup();"></div>
+            </div>
+        </div>
+         <!--Added to cart notice-->
+        <div class = "modal" id = "addedToCart">
+            <!--modal content-->
+            <div class = "modal-content">
+                <!--close button-->
+                <span class="close" onclick = "closePopup('addedToCart')">&times;</span>
+                
+                <div style="font-size: 43;text-align: center;">
+                    <p><b>Added to Cart</b><label id = "itemTitle"></label></p>
+                </div>
+            </div>
+        </div>
+        <!--Checkout Modal-->
+        <div class = "modal" id = "checkout">
+            <div class = "modal-content">
+                <span class="close" onclick = "closePopup('checkout')">&times;</span>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Item Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id='tableBody'>
+                            <!--Stuff Should Go Here-->
+                        </tbody>
+                    </table>
+                    <h2>Total: <label style="font-style: italic;font-size: larger;" id = "orderTotal">$UhOh</label></h2>
+                    <button onclick="placeOrder()">Place Order</button><br><br>
+                </div>
+            </div>
+        </div>
+        <!--"Checked Out" Modal-->
+        <div class = "modal" id = "checkedout">
+            <div class = "modal-content">
+                <span class="close" onclick = "closePopup('checkout')">&times;</span>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Item Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id='tableBody2'>
+                            <!--Stuff Should Go Here too-->
+                        </tbody>
+                    </table>
+                    <h2>Total: <label style="font-style: italic;font-size: larger;" id = "orderTotal2">$999999</label></h2>
+                    <h3>Order submitted successfully! We thank you for your continued patronage.</h3>
+                    <button onclick="closePopup('checkedout')">Close</button><br><br>
+                </div>
+            </div>
+        </div>
+        <div class = "additional-links">
+            <div>
+                <img class = "navImage" src = "../../images/al_feedback.png" onclick = "goToPage('contact');">
+            </div>
+            <div></div><div></div><div></div>
+            <div class="checkoutNavBtn">
+                <img class = "navImage" src = "../../images/al_checkout.png" onclick = "checkoutPopup();">
+            </div>
+
         </div>
         <img class = "backgroundImg" src = "../../images/bg.png">
         <img class = "contentBg" src = "../../images/inline_bg.png">

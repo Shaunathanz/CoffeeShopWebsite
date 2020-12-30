@@ -1,11 +1,12 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/forgot.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css?Thursday 24th of April 2008 04:45:21 PM" media="screen"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <script src="../../js/site.js"></script>
         <title id = "tab_name">sections/register_login/login</title>
     </head>
 
-    <body style = "background-color: black;">
+    <body class="body" style = "background-color: black;">
         <div class = "logo">
             <img class = "logoImg" src = "../../images/logo.png" onclick = "goToPage('home')">
         </div>
@@ -33,11 +34,13 @@
         </div>
 
         <!--PAGE-SPECIFIC CONTENT GOES HERE-->
-        <div class = "content-area">
-            <div>
-                <p id= "login_success" style="display: none">You have been logged in successfully.<br><br>You will be redirected to the homepage shortly...</p>
-                <p id= "login_failure1" style="display: none">Couldn't log in. No account found with that username.<br><br>You will be redirected to the login shortly...</p>
-                <p id= "login_failure2" style="display: none">Couldn't log in. You have entered the wrong password for that account.<br><br>You will be redirected to the login shortly...</p>
+        <div class="content">
+            <div class = "content-area">
+                <div>
+                    <p id= "login_success" style="display: none">You have been logged in successfully.<br><br>You will be redirected to the homepage shortly...</p>
+                    <p id= "login_failure1" style="display: none">Couldn't log in. No account found with that username.<br><br>You will be redirected to the login shortly...</p>
+                    <p id= "login_failure2" style="display: none">Couldn't log in. You have entered the wrong password for that account.<br><br>You will be redirected to the login shortly...</p>
+                </div>
             </div>
         </div>
         <img class = "backgroundImg" src = "../../images/bg.png">

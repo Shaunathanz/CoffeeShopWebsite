@@ -1,11 +1,12 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css?Thursday 24th of April 2008 04:45:21 PM" media="screen"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../../js/site.js"></script>
         <title id = "tab_name">sections/contact</title>
     </head>
 
-    <body style = "background-color: black;">
+    <body class="body" style = "background-color: black;">
         <div class = "logo">
             <img class = "logoImg" src = "../../images/logo.png" onclick = "goToPage('home')">
         </div>
@@ -33,32 +34,31 @@
         </div>
 
         <!--PAGE-SPECIFIC CONTENT GOES HERE-->
-        <div class = "content-area">
-            <div>
+        <div class="content">
+            <div class = "content-area">
                 <div>
-                    <h1>Feedback</h1>
+                    <div>
+                        <h1>Feedback</h1>
+                    </div>
+                    <form action="mailto:shaun.graham@my.metrostate.edu" method="get" enctype="text/plain">
+                        <label for="name">First Name:</label><br>
+                        <input type="text" id="name" name="name"
+                            pattern="[a-zA-Z ]+"
+                            maxlength = "50"
+                            title="Required, alphabetical only, max length 50"
+                            required><br><br>
+                        <label for="lname">Last Name:</label><br>
+                        <input type="text" id="lname" name="lname"
+                            pattern="[a-zA-Z ]+"
+                            maxlength = "50"
+                            title="Required, alphabetical only, max length 50"
+                            required><br><br>
+                        <label for="Feedback">Feedback:</label><br>
+                        <textarea name="feedback"id="Feedback"rows="14"cols="38"pattern=".{1,2000}"maxlength="2000"title="Required, any character string, max length 2000"required></textarea><br><br>
+                        <input type="submit" name="submit" value="Send Feedback">
+                        <input type="reset" name="reset" value="Clear Form" />
+                    </form> 
                 </div>
-                <form action="process_feedback.html">
-                    <label for="name">First Name:</label><br>
-                    <input type="text" id="fname" name="fname"
-                        pattern="[a-zA-Z ]+"
-                        maxlength = "50"
-                        title="Required, alphabetical only, max length 50"
-                        required><br><br>
-                    <label for="name">Last Name:</label><br>
-                    <input type="text" id="lname" name="lname"
-                        pattern="[a-zA-Z ]+"
-                        maxlength = "50"
-                        title="Required, alphabetical only, max length 50"
-                        required><br><br>
-                    <label for="Feedback">Feedback:</label><br>
-                    <input type="text" id="Feedback" name="feedback"
-                        pattern=".{1,2000}"
-                        maxlength = 2000
-                        title="Required, any character string, max length 2000"
-                        required><br><br>
-                    <input type="submit" value="Send Feedback">
-                </form> 
             </div>
         </div>
         <img class = "backgroundImg" src = "../../images/bg.png">

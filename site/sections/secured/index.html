@@ -1,11 +1,12 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css?Thursday 24th of April 2008 04:45:21 PM" media="screen"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../../js/site.js"></script>
         <title id = "tab_name">sections/secured</title>
     </head>
 
-    <body style = "background-color: black;">
+    <body class="body" style = "background-color: black;">
         <div class = "logo">
             <img class = "logoImg" src = "../../images/logo.png" onclick = "goToPage('home')">
         </div>
@@ -33,7 +34,7 @@
         </div>
 
         <!--PAGE-SPECIFIC CONTENT GOES HERE-->
-        <div class = "additional-links">
+        <!--<div class = "additional-links">
             <h3>Additional Links</h3>
             <ul>
                 <li onclick = "goToPage('register_login');" >Register/Login</li>
@@ -41,72 +42,84 @@
             <ul>
                 <li onclick = "goToPage('contact');" >Feedback</li>
             </ul>
-        </div>
-        <div class = "content-area">
-            <div id = "error" style = "display: none">
-                <p>You must be logged in to access this page!<br><br>Redirecting to the login page...</p>
+        </div>-->
+        <div class="content">
+            <div class = "content-area" id="content-area">
+                <div id = "error" style = "display: none">
+                    <p>You must be logged in to access this page!<br><br>Redirecting to the login page...</p>
+                </div>
+                <h1 id="header" style="display:none">Profile</h1>
+                <div id="info" style="display:none">
+                    <table>
+                        <thead>
+                            <th><!--Property--></th>
+                            <th><!--Value--></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Email Address</td>
+                                <td id="1">n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Username</td>
+                                <td id="3">n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Password</td>
+                                <td id="5">n/a</td>
+                            </tr>
+                            <tr>
+                                <td>First Name</td>
+                                <td id="9">n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Last Name</td>
+                                <td id="11">n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Date of Birth</td>
+                                <td id="13">n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td id="15">n/a</td>
+                            </tr>
+                            <tr>
+                                <td>City</td>
+                                <td id="17">n/a</td>
+                            </tr>
+                            <tr>
+                                <td>State</td>
+                                <td id="19">n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Zip</td>
+                                <td id="21">n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Phone #</td>
+                                <td><p>(<label id = "23">n/a</label>) <label id = "25">n/a</label>-<label id = "27">n/a</label></p></td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td id="29">n/a</td>
+                            </tr>
+                            <tr>
+                                <td>About</td>
+                                <td id="31">n/a</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <h1>Profile</h1>
-            <table>
-                <thead>
-                    <th><!--Property--></th>
-                    <th><!--Value--></th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Email Address</td>
-                        <td id="1">n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Username</td>
-                        <td id="3">n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td id="5">n/a</td>
-                    </tr>
-                    <tr>
-                        <td>First Name</td>
-                        <td id="9">n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Last Name</td>
-                        <td id="11">n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Date of Birth</td>
-                        <td id="13">n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Address</td>
-                        <td id="15">n/a</td>
-                    </tr>
-                    <tr>
-                        <td>City</td>
-                        <td id="17">n/a</td>
-                    </tr>
-                    <tr>
-                        <td>State</td>
-                        <td id="19">n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Zip</td>
-                        <td id="21">n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Phone #</td>
-                        <td><p>(<label id = "23">n/a</label>) <label id = "25">n/a</label>-<label id = "27">n/a</label></p></td>
-                    </tr>
-                    <tr>
-                        <td>Color</td>
-                        <td id="29">n/a</td>
-                    </tr>
-                    <tr>
-                        <td>About</td>
-                        <td id="31">n/a</td>
-                    </tr>
-                </tbody>
-            </table>
+        </div>
+        <div class = "additional-links">
+            <div>
+                <img class = "navImage" src = "../../images/al_feedback.png" onclick = "goToPage('contact');">
+            </div>
+            <div>
+                <img class = "navImage" src = "../../images/section_register_login.png" onclick = "goToPage('register_login');">
+            </div>
         </div>
         <img class = "backgroundImg" src = "../../images/bg.png">
         <img class = "contentBg" src = "../../images/inline_bg.png">

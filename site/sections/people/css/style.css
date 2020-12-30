@@ -1,6 +1,7 @@
 .body
 {
     text-align: center;
+    overflow: hidden; 
     background-color: black;
     width: 100%;
     height: 100%;
@@ -9,7 +10,7 @@
 .logo
 {
     text-align: center;
-    height: 12%;
+    height: 112px;
     width: 70%;
     left: 15%;
     right: 15%;
@@ -17,87 +18,126 @@
     z-index: 1;
 }
 
-.logo .logoImg
+.logo .logoImg 
 {
-    height: 100%;
-    width: 30%;
+    max-height: 115px;
+    width: 255px;
+    margin-top: 20px;
 }
 
 .navigation
 {
-    height: 4%;
-    width: 70%;
+    height: 65px;
+    width: 71%;
     left: 15%;
     margin-top: 112px;
     display: grid;
     position: fixed;
-    column-gap: 0%;
-    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(5, 1fr);
     grid-auto-flow: column;
     z-index: 1;
+}  
+
+.navigation > div
+{
+    width: 89%;
+    height: 60px;
 }
 
-.navigation > div:nth-child(3) 
+.navigation > div > img
 {
-    max-inline-size: 73%;
-}   
+    min-height: 29px;
+    width: 35%;
+}
 
 .navigation .navImage
 {
-    height: 70%;
-    width: 40%;
+    height: 50%;
 }
 
-.additional-links 
+.additional-links
 {
-    display: block;
+    width: 70.9%;
+    left: 14.8%;
+    bottom: 0px;
+    display: grid;
     position: fixed;
-    width: 9%;
-    left: 7%;
-    height: 80%;
-    top: 18%;
-    z-index: 2;
-    color: white;
-}   
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0px;
+    grid-auto-flow: column;
+    background-color: black;
+    z-index: 1;
+    min-height: 29px;
+    max-height: 35px;
+    text-align: center;
+    padding-left: 7px;
+}  
 
-.additional-links > ul:hover 
+.additional-links > div
 {
-    font-size: larger;
+    max-width: 230px;
+}
+
+.additional-links > div > img
+{
+    min-height: 29px;
+    min-width: 40px;
+}
+
+.additional-links .navImage
+{
+    height: 50%;
+    width: 100px;
+}
+
+.content
+{
+    position: absolute;
+    display: block;
+    width: 69%;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    left: 16%;
+    top: 166px;
+    bottom: 32px;
+    min-height: 0%;
+    max-height: 82%;
+    margin-left: 0%;
+    padding-right: 0%;
+    z-index: 1;
+    overflow: scroll;
 }
 
 .content-area
 {
-    position: fixed;
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 68%;
+    position: inherit;
+    display: block;
+    width: 69%;
     text-align: left;
-    height: 81%;
+    grid-template-columns: repeat(3, 1fr);
+    height: 55%;
     left: 16%;
-    margin-top: 157px;
-    padding-top: 18px;
     margin-left: 0%;
+    padding-right: 0%;
     z-index: 1;
-    overflow: auto;
 }
 
 .content-area > div 
 {
-    padding-right: 25px;
-    padding-left: 25px;
-    margin-bottom: 6%;
+    padding-top: 0px;
+    padding-left: 0px;
 }
-  
 
 .contentBg
 {
     display: block;
-    position: fixed;
-    margin-top: 156px;
-    height: 85%;
+    position: absolute;
+    height: 89%;
     width: 70%;
     left: 15%;
     right: 15%;
+    bottom: 36px;
+    top: 159px;
 }
 
 .backgroundImg
@@ -106,8 +146,204 @@
     position: fixed;
     width: 100%;
     height: 76%;
+    min-height: 715px;
     left: 0;
     margin-top: -8px;
+}
+
+@media (max-width: 1564px)
+{
+    [class*="content"]
+    {
+        position:absolute;
+        width:69%;
+    }
+
+    [class*="content-area"]
+    {
+        left: 0%;
+        min-width: 69%;
+        width: 99%;
+    }
+
+    [class*="content-area2"]
+    {
+        min-height: 25%;
+        min-width: 69%;
+        width: 70%;
+        left: 15%;
+    }
+
+    [class*="content-area3"]
+    {
+        min-width: 509px;
+        width: 100%;
+        left: 0%;
+    }
+}
+
+@media (max-width: 816px)
+{
+    [class*="logoImg"]
+    {
+        min-width: 168px;
+    }
+
+    [class*="navigation"]
+    {
+        height: 7%;
+        width: 99%;
+        left: 0%;
+    }
+
+    [class*="content"]
+    {
+        position:absolute;
+        width:97%;
+        height: 78.6%;
+        left:2%;
+    }
+
+    [class*="content-area"]
+    {
+        left: 0%;
+        min-width: 509px;
+        width: 99%;
+    }
+
+    [class*="content-area2"]
+    {
+        min-height: 25%;
+        min-width: 509px;
+        width: 100%;
+        left: 0%;
+    }
+
+    [class*="content-area3"]
+    {
+        min-width: 509px;
+        width: 100%;
+        left: 0%;
+    }
+
+    [class*="contentBg"]
+    {
+        width: 98.3%;
+        height: 89%;
+        left: 0%;
+    }
+
+    [class*="additional-links"]
+    {
+        height: 7%;
+        width: 100%;
+        left: 0%;
+    }
+}
+
+@media (max-width: 500px)
+{
+    [class*="logoImg"]
+    {
+        min-width: 168px;
+    }
+
+    [class*="navigation"]
+    {
+        height: 7%;
+        width: 99%;
+        left: 0%;
+    }
+
+    [class*="content"]
+    {
+        position:absolute;
+        width:97%;
+        left:2%;
+    }
+
+    [class*="content-area"]
+    {
+        left: 2%;
+        min-width: 214px;
+        width: 96%;
+        height: 78%;
+        margin-top: -1px;
+    }
+
+    [class*="content-area2"]
+    {
+        min-height: 30%;
+        min-width: 277px;
+        left: 0%;
+        font-size: 8;
+    }
+
+    [class*="content-area3"]
+    {
+        min-width: 292px;
+        left: 2%;
+        font-size:12;
+    }
+
+    [class*="contentBg"]
+    {
+        width: 96.3%;
+    }
+}
+
+@media (max-height: 500px)
+{
+    .logo
+    {
+        height: 79px;
+    }
+
+    .logo .logoImg
+    {
+        max-height: 51px;
+        width: 200px;
+        margin-top: 12px;
+    }
+
+    .navigation
+    {
+        height: 31px;
+        margin-top: 62px;
+    }
+
+    .navigation > div
+    {
+        height: 29px;
+    }
+
+    .navigation .navImage
+    {
+        height: 40%;
+    }
+
+    .navigation > div > img
+    {
+        min-height: 21px;
+    }
+
+    .content
+    {
+        top: 95px;
+        height: 69.6%;
+    }
+
+    .contentBg
+    {
+        top: 89px;
+        height: 79%;
+    }
+
+    .additional-links
+    {
+        min-height: 29px;
+        max-height: 29px;
+    }
 }
 
 @keyframes zoom { /* The definition of the animation, in this case a zoom effect */

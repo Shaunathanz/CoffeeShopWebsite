@@ -1,11 +1,12 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/forgot.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css?Thursday 24th of April 2008 04:45:21 PM" media="screen"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">      
         <script src="../../js/site.js"></script>
         <title id = "tab_name">sections/register_login/forgot</title>
     </head>
 
-    <body style = "background-color: black;">
+    <body class="body" style = "background-color: black;">
         <div class = "logo">
             <img class = "logoImg" src = "../../images/logo.png" onclick = "goToPage('home')">
         </div>
@@ -31,27 +32,28 @@
                 <img class = "navImage" src = "../../images/section_register_login.png" style = "width: 80%;" onclick = "goToPage('register_login')">
             </div>
         </div>
+        <div class = "additional-links">
+            <div>
+                <img class = "navImage" src = "../../images/al_feedback.png" onclick = "goToPage('contact');">
+            </div>
+        </div>
 
         <!--PAGE-SPECIFIC CONTENT GOES HERE-->
-        <div class = "additional-links">
-            <h3>Additional Links</h3>
-            <ul>
-                <li onclick = "goToPage('contact');" >Feedback</li>
-            </ul>
-        </div>
-        <div class = "content-area">
-            <div>
+        <div class = "content">
+            <div class = "content-area">
                 <div>
-                    <h1>Forgot Username/Password</h1>
+                    <div>
+                        <h1>Forgot Username/Password</h1>
+                    </div>
+                    <form action="process_info.html">
+                        <label for="email">Email Address:</label><br>
+                        <input type="email" id="email" name="email"
+                            pattern="[?=a-z].{1,345}"
+                            title="Must be a valid email address"
+                            required><br><br>
+                        <input type="submit" value="Process Request">
+                    </form> 
                 </div>
-                <form action="process_info.html">
-                    <label for="email">Email Address:</label><br>
-                    <input type="email" id="email" name="email"
-                        pattern="[?=a-z].{1,345}"
-                        title="Must be a valid email address"
-                        required><br><br>
-                    <input type="submit" value="Process Request">
-                </form> 
             </div>
         </div>
         <img class = "backgroundImg" src = "../../images/bg.png">

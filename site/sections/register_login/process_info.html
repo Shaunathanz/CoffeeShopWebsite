@@ -1,11 +1,12 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/forgot.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css?Thursday 24th of April 2008 04:45:21 PM" media="screen"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../../js/site.js"></script>
         <title id = "tab_name">sections/register_login/process_info</title>
     </head>
 
-    <body style = "background-color: black;">
+    <body class="body" style = "background-color: black;">
         <div class = "logo">
             <img class = "logoImg" src = "../../images/logo.png" onclick = "goToPage('home')">
         </div>
@@ -33,21 +34,12 @@
         </div>
 
         <!--PAGE-SPECIFIC CONTENT GOES HERE-->
-        <div class = "additional-links">
-            <h3>Additional Links</h3>
-            <ul>
-                <li onclick = "goToPage('contact');" >Feedback</li>
-            </ul>
-        </div>
-        <div class = "content-area">
-            <div>
-                <p>If there's an account matching your info you'll receive an email with the password.<br><br>You will be redirected to the homepage shortly...</p>
-                <!--Credit : https://stackoverflow.com/questions/3292038/redirect-website-after-certain-amount-of-time-->
-                <script>
-                    var timer = setTimeout(function() {
-                        goToPage('home');
-                    }, 3000);
-                </script>
+        <div class="content">
+            <div class = "content-area">
+                <div>
+                    <p>If there's an account matching your info you'll receive an email with the password.<br><br></p>
+                    <p id = "msg">You will be redirected to the homepage shortly...</p>
+                </div>
             </div>
         </div>
         <img class = "backgroundImg" src = "../../images/bg.png">
