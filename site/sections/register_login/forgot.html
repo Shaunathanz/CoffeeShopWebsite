@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+        <script src="../../js/site.js"></script>
+        <title id = "tab_name">sections/register_login/forgot</title>
+    </head>
+
+    <body style = "background-color: black;">
+        <div class = "logo">
+            <img class = "logoImg" src = "../../images/logo.png" onclick = "goToPage('home')">
+        </div>
+
+        <div class = "navigation">
+            <div>
+                <img class = "navImage" src = "../../images/section_about.png" onclick = "goToPage('about')">
+            </div>
+        
+            <div>
+                <img class = "navImage" src = "../../images/section_people.png" onclick = "goToPage('people')">
+            </div>
+        
+            <div>
+                <img class = "navImage" src = "../../images/section_blog.png" onclick = "goToPage('blog')">
+            </div>
+        
+            <div>
+                <img class = "navImage" src = "../../images/section_products.png" onclick = "goToPage('products')">
+            </div>
+        
+            <div>
+                <img class = "navImage" src = "../../images/section_register_login.png" style = "width: 80%;" onclick = "goToPage('register_login')">
+            </div>
+        </div>
+
+        <!--PAGE-SPECIFIC CONTENT GOES HERE-->
+        <div class = "additional-links">
+            <h3>Additional Links</h3>
+            <ul>
+                <li onclick = "goToPage('contact');" >Feedback</li>
+            </ul>
+        </div>
+        <div class = "content-area">
+            <div>
+                <div>
+                    <h1>Forgot Username/Password</h1>
+                </div>
+                <form action="process_info.html">
+                    <label for="fname">First Name:</label><br>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Last Name:</label><br>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <label for="address">Street Address:</label><br>
+                    <input type="text" id="address" name="address"><br><br>
+                    <label for="city">City:</label><br>
+                    <input type="text" id="city" name="city"><br><br>
+                    <label for="state">State:</label><br>
+                    <input type="text" id="state" name="state"><br><br>
+                    <label for="zip">Zip:</label><br>
+                    <input type="text" id="zip" name="zip"><br><br>
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="text" id="phone" name="phone"><br><br>
+                    <input type="submit" value="Process Request">
+                </form> 
+            </div>
+        </div>
+        <img class = "backgroundImg" src = "../../images/bg.png">
+        <img class = "contentBg" src = "../../images/inline_bg.png">
+    </body>
+</html>

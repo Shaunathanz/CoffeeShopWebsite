@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+        <script src="../../js/site.js"></script>
+        <title id = "tab_name">sections/register_login/process_info</title>
+    </head>
+
+    <body style = "background-color: black;">
+        <div class = "logo">
+            <img class = "logoImg" src = "../../images/logo.png" onclick = "goToPage('home')">
+        </div>
+
+        <div class = "navigation">
+            <div>
+                <img class = "navImage" src = "../../images/section_about.png" onclick = "goToPage('about')">
+            </div>
+        
+            <div>
+                <img class = "navImage" src = "../../images/section_people.png" onclick = "goToPage('people')">
+            </div>
+        
+            <div>
+                <img class = "navImage" src = "../../images/section_blog.png" onclick = "goToPage('blog')">
+            </div>
+        
+            <div>
+                <img class = "navImage" src = "../../images/section_products.png" onclick = "goToPage('products')">
+            </div>
+        
+            <div>
+                <img class = "navImage" src = "../../images/section_register_login.png" style = "width: 80%;" onclick = "goToPage('register_login')">
+            </div>
+        </div>
+
+        <!--PAGE-SPECIFIC CONTENT GOES HERE-->
+        <div class = "additional-links">
+            <h3>Additional Links</h3>
+            <ul>
+                <li onclick = "goToPage('contact');" >Feedback</li>
+            </ul>
+        </div>
+        <div class = "content-area">
+            <div>
+                <p>If there's an account matching your info you'll receive an email with the password.<br><br>Click the logo to return to the homepage.</p>
+            </div>
+        </div>
+        <img class = "backgroundImg" src = "../../images/bg.png">
+        <img class = "contentBg" src = "../../images/inline_bg.png">
+    </body>
+</html>
