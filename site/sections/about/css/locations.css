@@ -48,6 +48,23 @@
     width: 40%;
 }
 
+.additional-links 
+{
+    display: block;
+    position: fixed;
+    width: 9%;
+    left: 7%;
+    height: 80%;
+    top: 18%;
+    z-index: 2;
+    color: white;
+}   
+
+.additional-links > ul:hover 
+{
+    font-size: larger;
+}
+
 .content-area
 {
     position: fixed;

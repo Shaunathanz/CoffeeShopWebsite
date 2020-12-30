@@ -68,8 +68,7 @@
 .content-area
 {
     position: fixed;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: block;
     width: 68%;
     text-align: center;
     height: 81%;
@@ -86,6 +85,7 @@
     padding-right: 25px;
     padding-left: 25px;
 }
+  
 
 .contentBg
 {

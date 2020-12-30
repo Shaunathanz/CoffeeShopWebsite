@@ -36,7 +36,16 @@
         <div class = "additional-links">
             <h3>Additional Links</h3>
             <ul>
+                <li onclick = "open('forgot.html', '_self', '', false);" >Forgot Username / Password</li>
+            </ul>
+            <ul>
+                <li onclick = "goToPage('secured');" >Secured</li>
+            </ul>
+            <ul>
                 <li onclick = "goToPage('contact');" >Feedback</li>
+            </ul>
+            <ul id="test-info" style="display: none">
+                <li onclick = "test()" ><b>Test Info Fill</b></li>
             </ul>
         </div>
         <div class = "content-area">
@@ -45,17 +54,200 @@
                     <h1>Login</h1>
                 </div>
                 <form action="login.html">
-                    <label for="username">Username:</label><br>
-                    <input type="text" id="username" name="username"><br>
-                    <label for="password">Password:</label><br>
-                    <input type="text" id="password" name="password"><br><br>
-                    <input type="submit" value="Login">
+                    <label for="username-login">Username:</label><br>
+                    <input type="text" id="username-login" name="username"
+                        pattern=".{1,20}"
+                        maxlength = 20
+                        title="Required, any character string, max length 20"
+                        required><br>
+                    <label for="password-login">Password:</label><br>
+                    <input type="password" id="password-login" name="password"
+                        pattern=".{1,20}"
+                        maxlength="20"
+                        title="Required, any character string, max length 20"
+                        required><br>
+                    <br><input type="submit" value="Login">
                 </form> 
+                <div>
+                    <a href = "forgot.html" title = "Forgot Username/Password">Forgot Username/Password<br><br><br></a>
+                </div>
             </div>
             <div>
-                <a href = "forgot.html" title = "Forgot Username/Password">Forgot Username/Password<br><br><br></a>
+                <div>
+                    <h1>Register</h1>
+                </div>
+                <form action="register.html" id = "form">
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email"
+                        pattern="[?=a-z].{1,345}"
+                        title="Must be a valid email address"
+                        required><br>
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username"
+                        pattern=".{1,20}"
+                        maxlength = 20
+                        title="Required, any character string, max length 20"
+                        required><br>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password"
+                        pattern=".{1,20}"
+                        maxlength="20"
+                        title="Required, any character string, max length 20"
+                        required><br>
+                    <label for="password2">Retype Password:</label><br>
+                    <input type="password" id="password2" name="password2"
+                        pattern=".{1,20}"
+                        maxlength="20"
+                        title="Required, passwords must match"
+                        required><br>
+                    <label for="fname">First Name:</label><br>
+                    <input type="text" id="fname" name="fname"
+                        pattern="[a-zA-Z ]+"
+                        maxlength = "50"
+                        title="Required, alphabetical only, max length 50"
+                        required><br>
+                    <label for="lname">Last Name:</label><br>
+                    <input type="text" id="lname" name="lname"
+                        pattern="[a-zA-Z ]+"
+                        maxlength = "50"
+                        title="Required, alphabetical only, max length 50"
+                        required><br>
+                    <label for="dob">Date of Birth:</label><br>
+                    <input type="date" id="dob" name="dob"
+                        pattern="\d{1,2}/\d{1,2}/\d{4}"
+                        title="Date"><br>
+                    <label for="address">Address:</label><br>
+                    <input type="text" id="address" name="address"
+                        pattern="[a-z0-9A-Z ]+"
+                        maxlength = "255"
+                        title="Alpha Numeric, max length 255"><br>
+                    <label for="city">City:</label><br>
+                    <input type="text" id="city" name="city"
+                        pattern="[a-zA-Z ]+"
+                        maxlength = "50"
+                        title="Alpha only, max length 75"><br>
+                    <label for="state">State:</label><br>
+                    <select name="state" id="state" form="form" style="text-align: center;">
+                        <option value=""></option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select><br>
+                    <label for="zip">Zip Code:</label><br>
+                    <input type="text" id="zip" name="zip"
+                        pattern="[0-9-]+"
+                        maxlength = "10"
+                        title="Numeric, max length 10"><br>
+                    <!--Credit: https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern-->
+                    <label for="phone" title="Phone number">Phone Number<br>
+                        (<input id="tel1" name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" maxlength="3" size="2"/>)-
+                            <input id="tel2" name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" maxlength="3" size="2"/> - 
+                            <input id="tel3" name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" maxlength="4" size="3"/>
+                    </label><br>
+                    <label for="color">Color:</label><br>
+                    <select name="color" id="color" form="form" style="text-align: center;">
+                        <option value=""></option>
+                        <option style="color:#FF0000" value="#FF0000">Red</option>
+                        <option style="color:#FF8000" alue="#FF8000">Orange</option>
+                        <option value="#FFFF00">Yellow</option>
+                        <option style="color:#00FF00" value="#00FF00">Green</option>
+                        <option style="color:#0080FF" value="#0080FF">Blue</option>
+                        <option style="color:#0000FF" value="#0000FF">Indigo</option>
+                        <option style="color:#7F00FF" value="#7F00FF">Violet</option>
+                        <option value="#0000000">Black</option>
+                        <option style="color:#777777" value="#777777">Grey</option>
+                        <option value="#FFFFFF">White</option>
+                    </select><br>
+                    <label for="about">About:</label><br>
+                    <input type="text" id="about" name="about"
+                        pattern="[a-z0-9A-Z ]+"
+                        maxlength = "1000"
+                        title="Alpha Numeric, max length 1000"><br>
+                    <br><input type="submit" value="Register">
+                </form> 
             </div>
         </div>
+        <script>
+            window.onload = function()
+            {
+                var test = false;
+                if(test == true)
+                {
+                    console.log("Testing option enabled for this page!")
+                    document.getElementById("test-info").style = "display: block";
+                }
+            }
+            function test()
+                {
+                    document.getElementById("username-login").value = "test";
+                    document.getElementById("password-login").value = "test";
+                    document.getElementById("email").value = "test@test.com";
+                    document.getElementById("username").value = "test";
+                    document.getElementById("fname").value = "test";
+                    document.getElementById("lname").value = "test";
+                    document.getElementById("password").value = "test";
+                    document.getElementById("password2").value = "test";
+                    document.getElementById("password2").value = "test";
+                    document.getElementById("dob").value = "2012-12-12";
+                    document.getElementById("address").value = "test";
+                    document.getElementById("city").value = "test";
+                    document.getElementById("state").value = "MN";
+                    document.getElementById("zip").value = "1337";
+                    document.getElementById("tel1").value = "555";
+                    document.getElementById("tel2").value = "555";
+                    document.getElementById("tel3").value = "5555";
+                    document.getElementById("color").value = "#FF0000";
+                    document.getElementById("about").value = "test";
+                }
+        </script>
         <img class = "backgroundImg" src = "../../images/bg.png">
         <img class = "contentBg" src = "../../images/inline_bg.png">
     </body>

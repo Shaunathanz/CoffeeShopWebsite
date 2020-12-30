@@ -52,7 +52,7 @@
 {
     display: block;
     position: fixed;
-    width: 7%;
+    width: 9%;
     left: 7%;
     height: 80%;
     top: 18%;
@@ -68,8 +68,7 @@
 .content-area
 {
     position: fixed;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: block;
     width: 68%;
     text-align: center;
     height: 81%;
@@ -86,6 +85,15 @@
     padding-right: 25px;
     padding-left: 25px;
 }
+
+.content-area > table:nth-child(3) 
+{
+    margin-right: auto;
+    margin-left: 41%;
+    width: 25%;
+    margin-top: 6%;
+}
+   
 
 .contentBg
 {

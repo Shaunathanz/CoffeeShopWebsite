@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="css/forgot.css" media="screen"/>
         <script src="../../js/site.js"></script>
         <title id = "tab_name">sections/register_login/process_info</title>
     </head>
@@ -41,7 +41,13 @@
         </div>
         <div class = "content-area">
             <div>
-                <p>If there's an account matching your info you'll receive an email with the password.<br><br>Click the logo to return to the homepage.</p>
+                <p>If there's an account matching your info you'll receive an email with the password.<br><br>You will be redirected to the homepage shortly...</p>
+                <!--Credit : https://stackoverflow.com/questions/3292038/redirect-website-after-certain-amount-of-time-->
+                <script>
+                    var timer = setTimeout(function() {
+                        goToPage('home');
+                    }, 3000);
+                </script>
             </div>
         </div>
         <img class = "backgroundImg" src = "../../images/bg.png">
